@@ -7,7 +7,9 @@
   "author": "Xiaoyu Yin <yin530@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "event-emitter": "^0.3.5",
+    "event-emitter": "^0.3.5"
+  },
+  "peerDependencies": {
     "react": "^16.9.0",
     "react-native": "^0.60.5"
   },
