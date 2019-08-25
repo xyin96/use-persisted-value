@@ -1,0 +1,16 @@
+[ignore]
+
+[untyped]
+.*/node_modules/react-native/.*
+
+[include]
+
+[libs]
+./libdefs.js
+./flow-typed
+
+[lints]
+
+[options]
+
+[strict]

@@ -1,0 +1,23 @@
+{
+  "name": "use-persisted-value",
+  "version": "1.0.0",
+  "description": "A set of hooks that make it easier to set global state in react!",
+  "main": "index.js",
+  "repository": "git@github.com:xyin96/use-persisted-value",
+  "author": "Xiaoyu Yin <yin530@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "event-emitter": "^0.3.5",
+    "react": "^16.9.0",
+    "react-native": "^0.60.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.4",
+    "prettier": "^1.18.2"
+  }
+}
