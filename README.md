@@ -2,6 +2,7 @@
 ## Usage
 
 ### usePersistedValue
+We also keep a list of subscribers, so any mounted react components that use this hook will be notified of the update if you call `setTheme`.
 ```
 import * as React from 'react';
 import {usePersistedValue} from 'use-persisted-value';
@@ -40,3 +41,6 @@ function clearTheme() {
   ]);
 }
 ```
+
+## How does this differ from Context?
+This is not a replacement for Context. Context API is good for *React Hierarchy scoped variables* such as form state, theming, etc. But this lets you create global *singleton* variables that React Components can *subscribe* to, and retain its value between app starts.
