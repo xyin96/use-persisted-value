@@ -1,2 +1,2 @@
-export {useGlobalValue} from './hooks/useGlobalValue';
-export {usePersistedValue} from './hooks/usePersistedValue';
+export * from './hooks/useGlobalValue';
+export * from './hooks/usePersistedValue';
