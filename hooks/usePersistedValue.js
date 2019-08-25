@@ -1,8 +1,11 @@
-/* @flow */
+/**
+ * @flow
+ * @format
+ * */
 import { useCallback, useEffect, useState, useRef } from 'react';
 import { AsyncStorage } from 'react-native';
 import makeEventEmitter from 'event-emitter';
-import {GlobalValue} from './useGlobalValue';
+import { GlobalValue } from './useGlobalValue';
 
 const subscriptionMap = {};
 class PersistedValue<+T> extends GlobalValue<*> {

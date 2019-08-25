@@ -1,4 +1,7 @@
-/* @flow */
+/**
+ * @flow
+ * @format
+ * */
 import { useCallback, useEffect, useState, useRef } from 'react';
 import { AsyncStorage } from 'react-native';
 import makeEventEmitter from 'event-emitter';
@@ -8,8 +11,8 @@ export class GlobalValue<T> {
   key: string;
   value: ?T;
   emit: (string, T) => void;
-  on: (string, T => void) => void;
-  off: (string, T => void) => void;
+  on: (string, (T) => void) => void;
+  off: (string, (T) => void) => void;
 
   constructor(key: string, value?: T) {
     this.key = key;
@@ -20,7 +23,6 @@ export class GlobalValue<T> {
     this.value = value;
     this.emit('change', value);
   }
-
 }
 makeEventEmitter(GlobalValue.prototype);
 
