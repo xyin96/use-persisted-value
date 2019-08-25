@@ -5,9 +5,11 @@ import makeEventEmitter from 'event-emitter';
 import {GlobalValue} from './useGlobalValue';
 
 const subscriptionMap = {};
-class PersistedValue extends GlobalValue {
+class PersistedValue<+T> extends GlobalValue<*> {
+  _initializationPromise: Promise<void>;
+
   constructor(key, defaultValue = '', initialize = true) {
-    super(key, null);
+    super(key);
     if (initialize) {
       this._initializationPromise = new Promise(resolve => {
         AsyncStorage.getItem(key).then(value => {
@@ -41,7 +43,7 @@ export function usePersistedValue<T>(
   useEffect(() => {
     // set initial value
     subscriptionMap[key] =
-      subscriptionMap[key] ?? new PersistedValue(key, defaultValue);
+      subscriptionMap[key] ?? new PersistedValue<T>(key, defaultValue);
     if (value !== subscriptionMap[key].value) {
       _setValue(subscriptionMap[key].value);
     }
@@ -53,12 +55,12 @@ export function usePersistedValue<T>(
 }
 
 export function usePersistedValueOptimistic<T>(key: string, defaultValue: T) {
-  return usePersistedValue(key, defaultValue) ?? defaultValue;
+  return usePersistedValue<T>(key, defaultValue) ?? defaultValue;
 }
 
 export function prefetchKey<T>(key: string, defaultValue: T) {
   subscriptionMap[key] =
-    subscriptionMap[key] ?? new PersistedValue(key, defaultValue);
+    subscriptionMap[key] ?? new PersistedValue<T>(key, defaultValue);
   return subscriptionMap[key]._initializationPromise;
 }
 

@@ -6,11 +6,17 @@
   "repository": "git@github.com:xyin96/use-persisted-value",
   "author": "Xiaoyu Yin <yin530@gmail.com>",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn flow && yarn pretty-quick --staged"
+    }
+  },
   "dependencies": {
-    "event-emitter": "^0.3.5"
+    "event-emitter": "^0.3.5",
+    "pretty-quick": "^1.11.1",
+    "react": "^16.9.0"
   },
   "peerDependencies": {
-    "react": "^16.9.0",
     "react-native": "^0.60.5"
   },
   "devDependencies": {
@@ -19,7 +25,9 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-react": "^7.14.3",
+    "flow-bin": "^0.106.1",
     "husky": "^3.0.4",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "react-native": "^0.60.5"
   }
 }
