@@ -1,4 +1,9 @@
 # use-persisted-value
+## Installation
+```
+yarn add https://github.com/xyin96/use-persisted-value
+```
+
 ## Usage
 
 ### usePersistedValue
