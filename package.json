@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "event-emitter": "^0.3.5",
-    "pretty-quick": "^1.11.1",
-    "react": "^16.9.0"
+    "pretty-quick": "^1.11.1"
   },
   "peerDependencies": {
+    "react": "^16.9.0",
     "react-native": "^0.60.5"
   },
   "devDependencies": {
@@ -27,7 +27,6 @@
     "eslint-plugin-react": "^7.14.3",
     "flow-bin": "^0.106.1",
     "husky": "^3.0.4",
-    "prettier": "^1.18.2",
-    "react-native": "^0.60.5"
+    "prettier": "^1.18.2"
   }
 }
