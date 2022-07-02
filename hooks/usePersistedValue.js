@@ -3,7 +3,7 @@
  * @format
  * */
 import { useCallback, useEffect, useState, useRef } from 'react';
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import makeEventEmitter from 'event-emitter';
 import { GlobalValue } from './useGlobalValue';
 
